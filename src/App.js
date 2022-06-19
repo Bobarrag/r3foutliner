@@ -106,13 +106,15 @@ export default function App() {
         <ambientLight intensity={0.5} />
         <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
         <pointLight position={[-10, -10, -10]} />
+        //TODO: make outliner actually grab its child's geo and draw an outline based on that
+        //and also outline the edges of the item, prob with line segments
         {/* <Outliner>
           <Box geometry = {<boxGeometry/>} mesh = {<meshBasicMaterial/>} position={[0, 0, 0]} />
         </Outliner> */}
         //maybe best way to handle this is to allow ui buttons to select a shape, these results fill an object which is spread
         //across the arguments across their chosen shape
         //wait there is probably a better way to do this with children geo and material elements instead
-        <Box geometry = {<boxGeometry args = {[1,1,2]}/>} material = {<meshBasicMaterial color = '#FF1493'/>} position={[0, 1, 0]} />
+        {/* <Box geometry = {<boxGeometry args = {[1,1,2]}/>} material = {<meshBasicMaterial color = '#FF1493'/>} position={[0, 1, 0]} /> */}
         <CameraControls/>
       </Canvas>
   {/* <counter/> */}
